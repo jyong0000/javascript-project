@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JSON 객체 : 데이터를 주고 받을 떄 주로 사용
+        // key : value 형태
+        const data = {
+            name: "흰둥이" ,
+            owner: "신짱구",
+            age: 1,
+            arr : [1, 2, 3, 4] , // 배열
+            walk : function(str){
+                console.log(str)
+                console.log("산책중")
+            }
+        };
+        
+        console.log(data);
+        console.log(data.name);
+        console.log(data.age);
+        console.log(data.arr);
+
+        let result = data.arr;
+        console.log(result[2])
+
+        
+        data.owner = "허재용"
+        data.walk("안녕");
+        
+
+        //JSON 객체 => 문자열로 변환
+        let json = JSON.stringify(data)
+        console.log(JSON.stringify(data));
+
+        // 문자열 => JSON 객체로 변환
+        console.log(JSON.parse(json));
+
+        console.log('==========================================================================')
+
+        // 배열에 JSON 객체 넣기
+        const data2 = [{
+            name: "흰둥이",
+            owner : "신짱구",
+            age : 1
+        },{
+            name: "신짱구",
+            age: 5, 
+            hate: "피망"
+        }];
+
+        console.log(data2[1].name);
+        console.log(data2[1].age);
+        console.log(data2[1].hate);
+
+        data2[1].hate = "양파";
+        console.log(data2[1].hate);
+        
+        console.log('==========================================================================')
+
+        console.log(data2[0].name);
+        console.log(data2[0].age);
+        data2.owner = "신짱아"
+        console.log(data2)
+
+    </script>
+</body>
+</html>

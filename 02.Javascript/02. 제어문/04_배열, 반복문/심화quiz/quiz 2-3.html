@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = Number(prompt(`세 개의 정수를 입력하세요.`))
+        const b = Number(prompt(`세 개의 정수를 입력하세요.`))
+        const c = Number(prompt(`세 개의 정수를 입력하세요.`))
+
+        if (a < b) {
+            if (c < b) {
+                console.log(`${b} 이 최대값입니다.`)
+            } else {
+                console.log(`${c} 이 최대값입니다`)
+            }
+        } else if (b < a) {
+            if (c < a) {
+                console.log(`${a} 이 최대값입니다.`)
+            }
+        }
+        
+        if (a < b) {
+            if (a < c) {
+                console.log(`${a} 이 최솟값입니다.`)
+            } else {
+                console.log(`${c} 이 최솟값입니다`)
+            }
+        } else if (b < a) {
+            if (b < c) {
+                console.log(`${b} 이 최솟값입니다.`)
+            }
+        }
+
+        console.log(`합계: + ${a+b+c}`)
+        console.log(`평균값: + ${(a+b+c)/3}`)
+
+
+    </script>
+</body>
+</html>
