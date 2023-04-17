@@ -27,6 +27,14 @@
   color: white !important;
 }
 
+.a2 {
+  text-decoration: none;
+  color: black;
+}
+.col-sm-2 > a {
+  text-decoration: none;
+  color: black;
+}
 /* 푸터 */
 
 footer {

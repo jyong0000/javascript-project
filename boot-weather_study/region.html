@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/region.css" />
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.3.0-web/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/brands.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/solid.css" />
+    <!-- 부트스트랩 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="./index.html"
+              ><img src="./images/logo.svg" width="150" alt="로고"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasDarkNavbar"
+              aria-controls="offcanvasDarkNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-end text-bg-dark"
+              tabindex="-1"
+              id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                  AccuWeather
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./register.html"
+                      ><button type="button" class="btn btn-primary">
+                        회원가입
+                      </button></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <hr />
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >오늘</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">일별</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">시간별</a>
+                  </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="검색어를 입력"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="btn btn-success"
+                    style="width: 80px"
+                    type="submit"
+                  >
+                    검색
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="container">
+        <section>
+          <h2
+            style="font-size: 20px; font-weight: bold"
+            class="region-title"
+          ></h2>
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <div class="card mb-3" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-md-4" style="margin-top: 20px">
+                    <h5 style="margin-left: 20px">현재기상</h5>
+                    <img
+                      src="https://openweathermap.org/img/wn/01d.png"
+                      class="img-fluid rounded-start region-icon"
+                      alt="날씨아이콘"
+                      width="100px"
+                      style="margin-top: 20px"
+                    />
+                    <p style="margin: 10px 0 0 20px" class="region-weather"></p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <p class="description">기상조건</p>
+                      <p class="feel">체감 온도</p>
+                      <p class="humidity">습도</p>
+                      <p class="windspeed">풍속</p>
+                      <p class="cloud">흐림</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div>
+          <div class="container">
+            <a href="#">전 세계</a> > <a href="#">아시아</a> >
+            <a href="#">대한민국</a>
+          </div>
+        </div>
+        <div>
+          <div class="container">
+            <div>
+              © 2021 AccuWeather, Inc. "AccuWeather" and sun design are
+              registered trademarks of AccuWeather, Inc. All Rights Reserved.
+            </div>
+            <div>
+              <a href="#">이용 약관</a> | <a href="#">개인정보 보호정책</a> |
+              <a href="#">쿠키 사용 정책</a> |
+              <a href="#">TAG 공개</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./js/region.js"></script>
+  </body>
+</html>
