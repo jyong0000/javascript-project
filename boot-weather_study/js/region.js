@@ -60,7 +60,6 @@ function getCityweather(q) {
 
 // 4. 데이터 바인딩 작업
 let temp = getCityweather(q);
-console.log(temp);
 $(".region-title").text(`${krcity} 상세날씨`);
 var iconURL = "https://openweathermap.org/img/wn/" + temp.icon + ".png";
 $(".region-icon").attr("src", iconURL);
