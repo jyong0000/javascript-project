@@ -47,8 +47,6 @@ function getCityweather(q) {
 
       const icon = data.weather[0].icon;
       temp.icon = icon;
-
-      console.log(data);
     },
     error: function (request, status, error) {
       console.log("code:" + request.status);
